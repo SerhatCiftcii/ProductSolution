@@ -34,13 +34,13 @@ namespace Product.Repositories.Repo
             }
         }
 
-        public async Task<List<ProductModel>> GetAllProductAsync()
+        public async Task<List<ProductModel>> GetAllProductsAsync()
         {
             var result = await _context.Products.ToListAsync();
             return result;
         }
 
-        public async Task<ProductModel?> GetProductGetByIdAsync(int id)
+        public async Task<ProductModel?> GetProductByIdAsync(int id)
         {
             var product =await _context.Products.FindAsync(id);
             return product;

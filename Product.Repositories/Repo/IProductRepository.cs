@@ -10,9 +10,9 @@ namespace Product.Repositories.Repo
     public interface IProductRepository
     {
         //bütün ürünleri getirir.
-        Task<List<ProductModel>> GetAllProductAsync();
+        Task<List<ProductModel>> GetAllProductsAsync();
         // idye gören ürünümüzü getirir.
-        Task<ProductModel?> GetProductGetByIdAsync(int id);
+        Task<ProductModel?> GetProductByIdAsync(int id);
         //ekleme
         Task<ProductModel> AddProductAsync(ProductModel product);
         //güncelleme 
